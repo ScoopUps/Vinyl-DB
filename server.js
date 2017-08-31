@@ -2,6 +2,7 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const albumsRouter = require('./routes/albums');
 
 //create instance of express in app variable
 const app = express();
@@ -17,6 +18,8 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 //----ROUTES----
+app.use('/albums', albumsRouter);
+
 app.get('/', (req,res) => {
   res.send(`<h1>Hello!!!</h1>`);
 });
