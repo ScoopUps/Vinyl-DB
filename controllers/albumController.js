@@ -1,8 +1,18 @@
 //import model object
-const albumDB = require('../models/albumDB');
+const albumDB = require('../models/albumsDB');
 
 //export album controller module with methods
 module.exports = {
+
+//controller to populate an empty album form
+makeBlankAlbum(req,res){
+  res.json({
+    id: null,
+    artist: null,
+    album: null,
+    condition: null,
+  });
+},
 
 //controller method to show all items
 show(req,res,next){
@@ -45,7 +55,7 @@ showOne(req, res, next){
 
 //controller method to update one item by id
 update(req, res, next){
-  albumDB.update(req.params.id)
+  albumDB.update(req.body, req.params.id)
     .then((album) => {
       res.json({
         message: 'updated successfully',

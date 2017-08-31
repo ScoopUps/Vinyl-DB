@@ -1,7 +1,10 @@
 //import PG-promise module
 const pgp = require('PG-promise')();
 //import database configuration
-const db = require('../config/config');
+const dbConfig = require('../config/config');
+
+//create instance of pgp referencing the db configuration
+const db = pgp(dbConfig);
 
 //export albums DB model with methods
 module.exports = {
@@ -10,6 +13,7 @@ module.exports = {
     return db.many(
     `SELECT artist, album, condition
     FROM albums
+    ORDER BY artist
     `);
   },
 
@@ -34,14 +38,16 @@ module.exports = {
   },
 
   //method to update items in db by id
-  update(album){
-    return  db.one(
+  update(album, id){
+    return db.one(
       `UPDATE albums
       SET
-      artist = $/artist/,
-      album = $/album/,
-      condition = $/condition/
-      `, album);
+      artist = $1,
+      album = $2,
+      condition = $3
+      WHERE id = $4
+      RETURNING *
+      `, [album.artist, album.album, album.condition, id]);
   },
 
   //method to delete items from db by id

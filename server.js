@@ -3,9 +3,15 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const albumsRouter = require('./routes/albums');
+const path = require('path');
+const methodOverride = require('method-override');
 
 //create instance of express in app variable
 const app = express();
+
+//configure views to views folder and set views engine to ejs
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 //----PORTS----
 const PORT = process.env.PORT || 3000;
