@@ -1,0 +1,128 @@
+/*------------TOP PARTIAL------------*/
+
+header {
+  height: 50px;
+  width: 100%;
+  background-color: firebrick;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#logo{
+  font-size: 52px;
+  font-weight: 900;
+  width: 120px;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 2px 2px black;
+  z-index: 3;
+}
+
+nav{
+  height: 47px;
+  width: 100%;
+  background-color: firebrick;
+  z-index: 0;
+  padding-top: 3px;
+}
+
+#disctop {
+  height: 47px;
+  width: 100%;
+  background-color: black;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  z-index: 1;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbuttons {
+  height: 30px;
+  width: 75px;
+  margin: 10px 15px 0px;
+  border-radius: 10px;
+  color: white;
+  background-color: firebrick;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: monospace;
+  text-shadow: 2px 2px black;
+  outline: none;
+}
+
+/*---------MAINS------------*/
+
+main{
+  height: 325px;
+  background-color: rgba(0,0,0,.95);
+  width: 100%;
+}
+
+#display {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.welcome {
+  display: block;
+  width: 80%;
+  margin: auto;
+  background-color: firebrick;
+  color: white;
+  text-shadow: 1px 1px black;
+  padding: 10px 0;
+  position: relative;
+  top: 15%;
+  text-align: center;
+}
+.welcome p{
+
+}
+
+#favorites{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  outline: none;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: monospace;
+  display: block;
+  position: relative;
+  margin: auto;
+  top: 25%;
+}
+
+
+/*--------BOTTOM PARTIAL----------*/
+
+#bottomblock {
+  height: 50px;
+  width: 100%;
+  background-color: firebrick;
+  z-index: 0;
+}
+
+#discbottom {
+  height: 47px;
+  width: 100%;
+  background-color: black;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  position: relative;
+  z-index: 1;
+  max-height: 100px;
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  background-color: firebrick;
+  clear: both;
+}
