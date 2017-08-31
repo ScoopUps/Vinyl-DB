@@ -4,3 +4,5 @@
 ![seat](https://git.generalassemb.ly/storage/user/7172/files/4f6f6bb4-8d8c-11e7-94db-d9290b4ed054)
 ![server_chart](https://git.generalassemb.ly/storage/user/7172/files/5453472c-8d8c-11e7-97d3-42b4ad3e0d5e)
 ![db_structure](https://git.generalassemb.ly/storage/user/7172/files/570be5b4-8d8c-11e7-9074-3ea286bd338e)
+![day 1 home-dev wireframe](https://git.generalassemb.ly/storage/user/7172/files/838c08ba-8dd9-11e7-9f0c-d9caac4d653a)
+![day 1 showall-dev wireframe](https://git.generalassemb.ly/storage/user/7172/files/84f4c6f6-8dd9-11e7-8489-8ac157f7161c)
