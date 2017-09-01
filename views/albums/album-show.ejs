@@ -1,0 +1,24 @@
+<% include ../partials/top.ejs %>
+
+  <main id="showmain">
+    <div id="showdisplay">
+      <div class="record">
+        <span class="artist">Artist</span>
+        <span class="album">Album</span>
+        <span class="condition">2</span>
+        <button class="edit">EDIT</button>
+        <button class="del">TOSS</button>
+      </div>
+      <% for (let album of data) { %>
+        <div class="record">
+        <span class="artist"><%= album.artist %></span>
+        <span class="album"><%= album.album %></span>
+        <span class="condition"><%= album.condition %></span>
+        <button class="edit">EDIT</button>
+        <button class="del">TOSS</button>
+      </div>
+      <% } %>
+    </div>
+  </main>
+
+<% include ../partials/bottom.ejs %>

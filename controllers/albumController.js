@@ -18,10 +18,7 @@ makeBlankAlbum(req,res){
 show(req,res,next){
   albumDB.findAll()
     .then((albums) => {
-      res.json({
-        message: 'ok',
-        data: albums,
-      });
+      res.locals.albums = albums;
       next();
     })
     .catch(err => next(err));
@@ -31,10 +28,7 @@ show(req,res,next){
 create(req,res,next){
   albumDB.create(req.body)
     .then((album) => {
-      res.json({
-        message: 'added successfully',
-        data: album,
-      });
+      res.locals.album = album;
       next();
     })
     .catch(err => next(err));
@@ -44,10 +38,7 @@ create(req,res,next){
 showOne(req, res, next){
   albumDB.findById(req.params.id)
     .then((album) => {
-      res.json({
-        message: 'ok',
-        data: album,
-      });
+      res.locals.album = album;
       next();
     })
     .catch(err => next(err));
@@ -57,10 +48,7 @@ showOne(req, res, next){
 update(req, res, next){
   albumDB.update(req.body, req.params.id)
     .then((album) => {
-      res.json({
-        message: 'updated successfully',
-        data: album,
-      });
+      res.locals.album = album;
       next();
     })
     .catch(err => next(err));
@@ -69,12 +57,7 @@ update(req, res, next){
 //controller method to delete one item by id
 destroy(req, res, next){
   albumDB.destroy(req.params.id)
-    .then(() => {
-      res.json({
-        message: 'deleted successfully',
-      });
-      next();
-    })
+    .then(() => next())
     .catch(err => next(err));
 },
 

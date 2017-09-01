@@ -2,7 +2,8 @@
 const express = require('express');
 //import album controller module
 const controller = require('../controllers/albumController');
-
+//import views from views controller module
+const views = require('../controllers/viewsController');
 
 //invoke the album router
 const albumsRouter = express.Router();
@@ -15,7 +16,7 @@ albumsRouter.route('/:id')
 
 //router based on collections
 albumsRouter.route('/')
-  .get(controller.show)
+  .get(controller.show, views.showAlbums, views.show404)
   .post(controller.create);
 
 //exporting the router module

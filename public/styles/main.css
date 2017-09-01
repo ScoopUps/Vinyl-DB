@@ -55,19 +55,7 @@ nav{
 
 /*---------MAINS------------*/
 
-main{
-  height: 325px;
-  background-color: rgba(0,0,0,.95);
-  width: 100%;
-}
-
-#display {
-  width: 50%;
-  height: 100%;
-  background-color: white;
-  margin: auto;
-  border-radius: 10px;
-}
+/*----GLOBAL STYLES----*/
 
 .welcome {
   display: block;
@@ -85,7 +73,23 @@ main{
 
 }
 
-#favorites{
+/*----INDEX PAGE----*/
+
+#indexmain{
+  height: 325px;
+  background-color: rgba(0,0,0,.95);
+  width: 100%;
+}
+
+#indexdisplay {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#indexfavorites{
   border-radius: 50%;
   height: 35px;
   width: 35px;
@@ -97,6 +101,79 @@ main{
   position: relative;
   margin: auto;
   top: 25%;
+}
+
+/*----SHOW ALL PAGE----*/
+
+#showmain{
+  height: 500px;
+  background-color: rgba(0,0,0,.95);
+  width: 100%;
+}
+
+#showdisplay {
+  width: 90%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.record {
+  border: .5px solid white;
+  width: 99.8%;
+  height: 25px;
+  background-color: bisque;
+  box-shadow: inset 0 0 10px black;
+  border-radius: 4px;
+  line-height: 25px;
+  color: black;
+  text-shadow: 1px 1px white;
+  font-family: monospace;
+}
+
+.artist{
+  display: inline-block;
+  width: 20%;
+  margin-left: 20px;
+}
+.album{
+  display: inline-block;
+  width: 45%;
+}
+.condition{
+  display: inline-block;
+  width: 5%;
+  text-align: center;
+}
+.edit{
+  display: inline-block;
+  width: 10%;
+  height: 23px;
+  text-align: center;
+  background-color: firebrick;
+  color: white;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 15px;
+  text-shadow: 2px 2px black;
+  outline: none;
+  font-family: monospace;
+}
+.del{
+  display: inline-block;
+  width: 10%;
+  height: 23px;
+  text-align: center;
+  background-color: firebrick;
+  color: white;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 15px;
+  text-shadow: 2px 2px black;
+  outline: none;
+  font-family: monospace;
 }
 
 
