@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
   extended: false,
 }));
 app.use(bodyParser.json());
-app.use(methodOverride('_method'));
+// app.use(methodOverride('_method'));
 //express middleware to reference static public folder for styling
 app.use(express.static('public'));
 
