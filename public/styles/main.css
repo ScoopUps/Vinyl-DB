@@ -74,15 +74,18 @@ nav{
 
 .welcome {
   display: block;
-  width: 80%;
+  width: 55%;
   margin: auto;
   background-color: firebrick;
   color: white;
   text-shadow: 1px 1px black;
-  padding: 10px 0;
+  padding: 5px 0;
   position: relative;
   top: 15%;
   text-align: center;
+  border-radius: 10px;
+  border: 3px solid black;
+  font-size: 18px;
 }
 .welcome p{
 
@@ -93,17 +96,18 @@ nav{
 
 
 #indexmain{
-  height: 325px;
+  height: 400px;
   background-color: rgba(0,0,0,.95);
   width: 100%;
 }
 
 #indexdisplay {
-  width: 50%;
-  height: 100%;
+  width: 45%;
+  height: 96%;
   background-color: white;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 50%;
+  border: 4px solid firebrick;
 }
 
 #indexfavorites{
@@ -123,11 +127,16 @@ nav{
 
 /*----SHOW ALL PAGE----*/
 
+#lock{
+  overflow-y: hidden;
+}
 
 #showmain{
   height: 517px;
   background-color: rgba(0,0,0,.95);
   width: 100%;
+  /*overflow-y: scroll;*/
+  overflow-x: hidden;
 }
 
 #showdisplay {
@@ -137,6 +146,12 @@ nav{
   margin: auto;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+#recordbarextra{
+  width: 100%;
+  background-color: black;
+  height: 25px;
 }
 
 #recordbar {
@@ -149,8 +164,8 @@ nav{
   background-color: black;
   line-height: 25px;
   color: white;
-  text-shadow: 1px 1px firebrick;
-  font-family: monospace;
+  text-shadow: 2px 2px firebrick;
+  font-family: sans-serif;
   margin: auto;
 }
 
@@ -196,7 +211,7 @@ nav{
   width: 5%;
   text-align: center;
 }
-.edit{
+.showedit{
   display: inline-block;
   width: 10%;
   height: 23px;
@@ -208,21 +223,262 @@ nav{
   font-size: 15px;
   text-shadow: 2px 2px black;
   outline: none;
+  font-family: monospace;
+  cursor: pointer;
+}
+.showdel{
+  display: inline-block;
+  width: 10%;
+  height: 23px;
+  text-align: center;
+  background-color: firebrick;
+  color: white;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 15px;
+  text-shadow: 2px 2px black;
+  outline: none;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+
+/*----S.E.A.T. SHOW ONE PAGE---- */
+
+#seatmain{
+  height: 400px;
+  background-color: rgba(0,0,0,.95);
+  width: 100%;
+}
+
+#seatdisplay {
+  width: 45%;
+  height: 94%;
+  background-color: firebrick;
+  margin: auto;
+  border-radius: 50%;
+  border: 10px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   font-family: monospace;
 }
-.del{
-  display: inline-block;
-  width: 10%;
-  height: 23px;
-  text-align: center;
-  background-color: firebrick;
+
+#seatartist {
+  font-size: 20px;
   color: white;
-  border-radius: 40px;
-  font-weight: 600;
-  font-size: 15px;
   text-shadow: 2px 2px black;
+}
+
+#seatalbum {
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+#seatcondition {
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+#editdelcontainer{
+  display: flex;
+  justify-content: space-around;
+}
+
+#seatediticon {
+  font-size: 20px;
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin: auto 5px;
+  cursor: pointer;
+}
+
+#seatdelicon {
+  font-size: 24px;
+  height: 39px;
+  width: 39px;
+  line-height: 31px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-weight: 800;
+  color: red;
+  margin: auto 5px;
+  cursor: pointer;
+}
+
+#seatfavorites{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
   outline: none;
+  font-size: 15px;
+  font-weight: 600;
   font-family: monospace;
+  display: block;
+  top: 25%;
+}
+
+
+
+
+/*----S.E.A.T. EDIT FORM PAGE---- */
+
+#editartist {
+  font-size: 15px;
+  height: 20px;
+  width: 175px;
+  color: black;
+  text-align: center;
+  background-color: white;
+  font-family: monospace;
+  border: none;
+  border-radius: 10px;
+}
+
+#editalbum {
+  font-size: 15px;
+  height: 20px;
+  width: 250px;
+  color: black;
+  text-align: center;
+  background-color: white;
+  font-family: monospace;
+  border: none;
+  border-radius: 10px;
+}
+
+#editcondition {
+  font-size: 15px;
+  height: 20px;
+  color: black;
+  text-align: center;
+  background-color: white;
+  font-family: monospace;
+  border: none;
+  border-radius: 10px;
+  width: 115px;
+}
+
+#editdisplay div {
+  font-size: 20px;
+  color: white;
+}
+
+#editfavorites{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  outline: none;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: monospace;
+  display: block;
+  top: 25%;
+}
+
+#editediticon {
+  font-size: 25px;
+  height: 39px;
+  width: 39px;
+  padding: 0px;
+  color: green;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin: auto 5px;
+  cursor: pointer;
+}
+
+#editdelicon {
+  font-size: 24px;
+  height: 39px;
+  width: 39px;
+  line-height: 31px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-weight: 800;
+  color: red;
+  margin: auto 5px;
+  cursor: pointer;
+}
+
+
+/*----S.E.A.T. ADD FORM PAGE---- */
+
+#adddisplay {
+  width: 45%;
+  height: 94%;
+  background-color: firebrick;
+  margin: auto;
+  border-radius: 50%;
+  border: 10px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: monospace;
+}
+
+#addartist {
+  width: 175px;
+  font-size: 15px;
+  height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-family: monospace;
+}
+
+#addalbum {
+  font-size: 15px;
+  height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 250px;
+  font-family: monospace;
+}
+
+#addcondition {
+  font-size: 15px;
+  height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 115px;
+  font-family: monospace;
+}
+
+#addfavorites{
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  outline: none;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: monospace;
+  display: block;
+  top: 25%;
+}
+
+#addconfirmicon {
+
 }
 
 

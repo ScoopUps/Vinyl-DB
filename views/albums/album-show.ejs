@@ -1,22 +1,25 @@
+<div id="lock">
 <% include ../partials/top.ejs %>
-
-  <main id="showmain">
+  <div id="recordbarextra">
     <div id="recordbar">
-        <span class="artistbar">Artist</span>
-        <span class="albumbar">Album</span>
-        <span class="conditionbar">Condition</span>
-      </div>
+        <span class="artistbar">ARTIST</span>
+        <span class="albumbar">ALBUM</span>
+        <span class="conditionbar">QUALITY</span>
+    </div>
+  </div>
+  <main id="showmain">
     <div id="showdisplay">
       <% for (let album of data) { %>
         <div class="record">
         <span class="artist"><%= album.artist %></span>
         <span class="album"><%= album.album %></span>
         <span class="condition"><%= album.condition %></span>
-        <button class="edit">SEE</button>
-        <button class="del">TOSS</button>
+        <a href="albums/<%= album.id %>"><button class="showedit">SEE</button></a>
+        <button class="showdel">TOSS</button>
       </div>
       <% } %>
     </div>
   </main>
 
 <% include ../partials/bottom.ejs %>
+</div>

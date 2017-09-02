@@ -1,6 +1,19 @@
-<% include ./partials/top.ejs %>
+<% include ../partials/top.ejs %>
 
+<main id="seatmain">
+  <div id="seatdisplay">
+    <span id="seatartist"><%= data.artist %></span>
+    <span id="seatalbum"><%= data.album %></span>
+    <button id="seatfavorites" type="button">F</button>
+    <span id="seatcondition"><%= data.condition %></span>
+    <div id="editdelcontainer">
+      <a id="seatediticon" href='/albums/<%= data.id %>/edit'>&#9997</a>
+      <form action="/albums/<%= data.id %>?_method=Delete" method="POST">
+        <input id="seatdelicon" type="Submit" value="X">
+      </form>
+    </div>
+  </div>
+</main>
 
-
-<% include ./partials/bottom.ejs %>
+<% include ../partials/bottom.ejs %>
 

@@ -39,6 +39,7 @@ showOne(req, res, next){
   albumDB.findById(req.params.id)
     .then((album) => {
       res.locals.album = album;
+      console.log(album);
       next();
     })
     .catch(err => next(err));

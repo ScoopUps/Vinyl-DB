@@ -11,7 +11,7 @@ module.exports = {
   //method to select all from db
   findAll(){
     return db.many(
-    `SELECT artist, album, condition
+    `SELECT artist, album, condition, id
     FROM albums
     ORDER BY artist
     `);
@@ -31,7 +31,7 @@ module.exports = {
   //method to select from db by id
   findById(id){
     return db.one(
-      `SELECT artist, album, condition
+      `SELECT artist, album, condition, id
       FROM albums
       WHERE id = $1
       `, id);
