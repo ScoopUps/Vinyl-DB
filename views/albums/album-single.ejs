@@ -8,9 +8,6 @@
     <span id="seatcondition"><%= data.condition %></span>
     <div id="editdelcontainer">
       <a id="seatediticon" href='/albums/<%= data.id %>/edit'>&#9997</a>
-      <form action="/albums/<%= data.id %>?_method=Delete" method="POST">
-        <input id="seatdelicon" type="Submit" value="X">
-      </form>
     </div>
   </div>
 </main>

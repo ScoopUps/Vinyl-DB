@@ -6,11 +6,11 @@
     <input name="artist" type="text" id="editartist" value="<%= data.artist %>"/>
     <input name="album" type="text" id="editalbum" value="<%= data.album %>"/>
     <button id="editfavorites" type="button">F</button>
-    <input name="quality" type="text" id="editcondition" value="<%= data.condition %>"/>
+    <input name="condition" type="text" id="editcondition" value="<%= data.condition %>"/>
     <div id="editdelcontainer">
       <input id="editediticon" type="submit" value='&#10004'>
     </form>
-      <form action="/albums/<%= data.id %>?_method=Delete" method="POST">
+      <form action="/albums/<%= data.id %>?_method=Delete" method="POST" onSubmit="return confirm('You sure about that?')">
         <input id="editdelicon" type="Submit" value="X">
       </form>
     </div>
