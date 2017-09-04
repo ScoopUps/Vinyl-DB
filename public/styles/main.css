@@ -208,8 +208,17 @@ nav{
 }
 .condition{
   display: inline-block;
-  width: 5%;
+  font-size: 14px;
+  padding-right: 4px;
+  width: 50px;
+  line-height: 21px;
+  border-radius: 40px;
+  background-color: black;
   text-align: center;
+  border: 2px solid firebrick;
+  height: 24px;
+  box-sizing: border-box;
+  text-shadow: none;
 }
 .showedit{
   display: inline-block;
@@ -281,6 +290,10 @@ nav{
   font-size: 20px;
   color: white;
   text-shadow: 2px 2px black;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px black;
+  height: 25px;
 }
 
 #editdelcontainer{
@@ -360,16 +373,26 @@ nav{
   border-radius: 10px;
 }
 
+#conditionlabel {
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: 16px;
+}
+
+#editconditioncontainer {
+  margin-left: -78px;
+}
+
 #editcondition {
   font-size: 15px;
-  height: 20px;
+  height: 28px;
   color: black;
   text-align: center;
   background-color: white;
   font-family: monospace;
   border: none;
   border-radius: 10px;
-  width: 115px;
+  width: 50px;
 }
 
 #editdisplay div {

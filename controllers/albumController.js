@@ -19,6 +19,16 @@ show(req,res,next){
   albumDB.findAll()
     .then((albums) => {
       res.locals.albums = albums;
+      //function to represent condition integer as a symbol character
+      albums.forEach((el) => {
+        if (el.condition === 3){
+          el.condition = '\ud83d\udc4d';
+        }if(el.condition === 2){
+          el.condition = '\ud83d\udc4c';
+        }if(el.condition === 1){
+          el.condition = '\ud83d\udc4e';
+        }
+      });
       next();
     })
     .catch(err => next(err));
@@ -39,7 +49,13 @@ showOne(req, res, next){
   albumDB.findById(req.params.id)
     .then((album) => {
       res.locals.album = album;
-      console.log(album);
+      if (album.condition === 3){
+          album.condition = '\ud83d\udc4d';
+        }if(album.condition === 2){
+          album.condition = '\ud83d\udc4c';
+        }if(album.condition === 1){
+          album.condition = '\ud83d\udc4e';
+        }
       next();
     })
     .catch(err => next(err));

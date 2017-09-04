@@ -6,7 +6,15 @@
     <input name="artist" type="text" id="addartist" placeholder="Artist"/>
     <input name="album" type="text" id="addalbum" placeholder="Album"/>
     <button id="editfavorites" type="button">F</button>
-    <input name="condition" type="text" id="addcondition" placeholder="Quality"/>
+    <div id="editconditioncontainer">
+    <label for='condition' id="conditionlabel">Quality
+      <select id="editcondition" name="condition" type="text">
+        <option value="3">&#128077</option>
+        <option value="2">&#128076</option>
+        <option value="1">&#128078</option>
+      </select>
+    </label>
+    </div>
     <input id="addconfirmicon" type="submit" value='&#10010'/>
   </div>
 </main>
