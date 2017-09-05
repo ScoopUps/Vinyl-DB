@@ -71,11 +71,73 @@ INSERT INTO albums (artist, album, condition) VALUES
     'Aja',
     2
     ),
-  ( 'Talking Heads',
+  (
+    'Talking Heads',
     'Little Creatures',
     3
   );
 
+INSERT INTO favorites (album_name, favorite) VALUES
+  (
+    'If You Want Blood',
+    false
+    ),
+  (
+    'The Band',
+    true
+    ),
+  (
+    'Heartbeat City',
+    true
+    ),
+  (
+    'Making Movies',
+    false
+    ),
+  (
+    'Hotel California',
+    true
+    ),
+  (
+    'Mirage',
+    true
+    ),
+  (
+    'Invisible Touch',
+    false
+    ),
+  (
+    'Heart',
+    false
+    ),
+  (
+    'Pearl',
+    false
+    ),
+  (
+    'Me and Bobby McGee',
+    false
+    ),
+  (
+    'Law and Order',
+    false
+    ),
+  (
+    'Technique',
+    false
+    ),
+  (
+    'Forever Now',
+    false
+    ),
+  (
+    'Aja',
+    true
+    ),
+  (
+    'Little Creatures',
+    false
+  );
 
 
 

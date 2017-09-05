@@ -2,8 +2,11 @@
 
   <main id="indexmain">
     <div id="indexdisplay">
-      <div class="welcome"><p>Welcome to Vinyl Personal Album Database</p></div>
-      <button id="indexfavorites" type="button">F</button>
+      <div class="welcome">
+        <p><%= message %></p>
+        <p id="tagline"><%= tagline %></p>
+      </div>
+      <button id="indexfavorites" type="button"><a href="/albums/favorites"><p>&#128876</p></a></button>
     </div>
   </main>
 

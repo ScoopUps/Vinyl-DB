@@ -31,7 +31,10 @@ app.use(express.static('public'));
 app.use('/albums', albumsRouter);
 
 app.get('/', (req,res) => {
-  res.render('index');
+  res.render('index', {
+    message: "Welcome to Vinyl",
+    tagline: "The DB for your LP",
+  });
 });
 
 //----LISTENERS----

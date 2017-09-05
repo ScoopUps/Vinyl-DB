@@ -21,6 +21,13 @@ showOneAlbum(req, res){
   });
 },
 
+showFavorites(req,res){
+  res.render('albums/album-favorites', {
+    data: res.locals.albums,
+    masthead: "Your Old Favorites",
+  });
+},
+
 handleCreate(req, res){
   res.redirect('/albums');
 },

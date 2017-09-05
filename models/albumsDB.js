@@ -17,6 +17,16 @@ module.exports = {
     `);
   },
 
+  //method to select only favorites (true) from db
+  findFavorites(){
+    return db.many(
+    `SELECT albums.artist, albums.album, albums.condition, albums.id, favorites.favorite
+    FROM albums
+    INNER JOIN favorites ON (albums.album = favorites.album_name)
+    WHERE favorites.favorite = TRUE
+    `);
+  },
+
   //method to insert new items into db
   create(album){
     return db.one(

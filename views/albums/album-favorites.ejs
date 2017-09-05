@@ -1,5 +1,6 @@
 <div id="lock">
 <% include ../partials/top.ejs %>
+  <div id="favoritesmasthead"><span><%= masthead %></span></div>
   <div id="recordbarextra">
     <div id="recordbar">
         <span class="artistbar">ARTIST</span>
@@ -7,14 +8,14 @@
         <span class="conditionbar">QUALITY</span>
     </div>
   </div>
-  <main id="showmain">
-    <div id="showdisplay">
+  <main id="favoritesmain">
+    <div id="favoritesdisplay">
       <% for (let album of data) { %>
         <div class="record">
         <span class="artist"><%= album.artist %></span>
         <span class="album"><%= album.album %></span>
         <span class="condition"><%= album.condition %></span>
-        <a href="albums/<%= album.id %>"><button class="showedit">OPEN</button></a>
+        <a href="/albums/<%= album.id %>"><button class="showedit">OPEN</button></a>
       </div>
       <% } %>
     </div>

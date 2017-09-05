@@ -14,6 +14,9 @@ albumsRouter.get('/:id/edit', controller.showOne, views.showAlbumEditForm, views
 //router to add item with empty form
 albumsRouter.get('/new', views.showAlbumAddForm);
 
+//router to show favorites
+albumsRouter.get('/favorites', controller.showFavorites, views.showFavorites, views.show404)
+
 //router based on specific ids
 albumsRouter.route('/:id')
   .get(controller.showOne, views.showOneAlbum, views.show404)

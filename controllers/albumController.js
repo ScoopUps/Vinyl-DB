@@ -34,10 +34,30 @@ show(req,res,next){
     .catch(err => next(err));
 },
 
+showFavorites(req,res,next){
+  albumDB.findFavorites()
+    .then((albums) => {
+      res.locals.albums = albums;
+      //function to represent condition integer as a symbol character
+      albums.forEach((el) => {
+        if (el.condition === 3){
+          el.condition = '\ud83d\udc4d';
+        }if(el.condition === 2){
+          el.condition = '\ud83d\udc4c';
+        }if(el.condition === 1){
+          el.condition = '\ud83d\udc4e';
+        }
+      });
+      next();
+    })
+    .catch(err => next(err));
+},
+
 //controller method to post a new item
 create(req,res,next){
   albumDB.create(req.body)
     .then((album) => {
+      console.log(album);
       res.locals.album = album;
       next();
     })
