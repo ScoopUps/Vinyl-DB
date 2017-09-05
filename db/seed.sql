@@ -1,5 +1,3 @@
-\c vinyl_albums_dev;
-
 INSERT INTO albums (artist, album, condition) VALUES
   (
     'AC/DC',

@@ -1,5 +1,3 @@
-\c vinyl_albums_dev;
-
 DROP TABLE IF EXISTS albums;
 DROP TABLE IF EXISTS favorites;
 
