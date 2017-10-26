@@ -22,7 +22,7 @@
     "express": "^4.15.4",
     "method-override": "^2.3.9",
     "morgan": "^1.8.2",
-    "pg-promise": "^6.5.1"
+    "pg-promise": "^6.10.3"
   },
   "engines": {
     "node": "8.5.0",
