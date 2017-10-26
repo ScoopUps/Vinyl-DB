@@ -1,5 +1,5 @@
 //import PG-promise module
-const pgp = require('PG-promise')();
+const pgp = require('pg-promise')();
 //import database configuration
 const dbConfig = require('../config/config');
 
